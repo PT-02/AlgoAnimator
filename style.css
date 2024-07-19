@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Wendy+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+nav {
+  background-color: #8E7AB5;
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 0 5rem;
+  gap: 1rem; 
+}
+
+nav .array-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+  padding: 0.2rem 0;
+  align-items: flex-start; 
+}
+
+nav .array-inputs p {
+  margin: 0;
+  font-size: 1rem; 
+}
+
+nav .array-inputs input {
+  width: 100%;
+}
+
+nav .array-inputs #a_size,
+nav .array-inputs #a_speed {
+  padding: 0.5rem 0;
+}
+
+nav .array-inputs #a_generate {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center; 
+  font-size: 1rem;
+}
+
+nav .array-inputs #a_generate:hover {
+  cursor: pointer;
+  background-color: #E493B3;
+  border-radius: 1rem;
+}
+
+nav .header_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding: 2rem 0; 
+}
+
+nav .header_right .nav-heading {
+  font-size: 3rem;
+  margin: 0;
+  font-family: "Wendy One", sans-serif;
+}
+
+nav .header_right .algos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  place-content: center;
+  padding: 2rem 0;
+}
+
+nav .header_right .algos button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+nav .header_right .algos button:hover {
+  background-color: #E493B3;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+
+section {
+  display: flex;
+  gap: 2%;
+  padding: 5px;
+}
+
+section #info_container {
+  display: flex;
+  flex-direction: column;
+  width: 21rem; 
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color:#f2aac7;
+}
+
+section #info_container h3 {
+  margin-bottom: 5px;
+}
+
+section #Info_Cont1,
+section #Info_Cont2 {
+  margin-bottom:1rem;
+  margin-left: 1rem;
+}
+
+section #Info_Cont1 h3,
+section #Info_Cont2 h3 {
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+section #Info_Cont2 .Complexity_Containers {
+  margin-top: 10px;
+}
+
+section #Info_Cont2 .Complexity_Containers .Pair_Definitions {
+  margin-top: 10px;
+}
+
+section #Info_Cont2 .Complexity_Containers .Pair_Definitions p {
+  display: inline;
+}
+
+section #Info_Cont2 .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size:0.8rem ;
+  text-transform: none;
+}
+
+section #array_container {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+}
+
+.hide {
+  display: none;
+}
+
+pre{
+ font-size: 0.8rem;
+  margin-left: 0rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+@media (max-width: 480px) {
+    nav {
+      grid-template-columns: 1fr; /* Stack nav items vertically */
+      text-align: center;
+      padding: 0; /* Remove padding */
+    }
+  
+    nav .array-inputs {
+      order: 2; /* Move below the buttons and heading */
+      align-items: center;
+      margin-top: 1rem;
+      padding: 0; /* Remove padding */
+    }
+  
+    nav .header_right {
+      order: 1; /* Move to top */
+      padding: 1rem 0; /* Adjust padding */
+    }
+  
+    nav .header_right .nav-heading {
+      font-size: 2rem; /* Smaller font size */
+    }
+  
+    nav .header_right .algos {
+      grid-template-columns: repeat(2, 1fr); /* Adjust number of columns for smaller screens */
+      gap: 0.5rem;
+      padding: 1rem 0; /* Adjust padding */
+    }
+  
+    nav .header_right .algos button {
+      font-size: 1rem; /* Smaller button text */
+    }
+  
+    section {
+      flex-direction: column; /* Stack sections vertically */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margin */
+    }
+  
+    section #info_container {
+      width: 100vw; /* Full viewport width */
+      padding: 1rem; /* Padding for better spacing */
+      margin: 0; /* Remove margin */
+      align-items: center; /* Center align */
+      box-sizing: border-box; /* Include padding in width */
+    }
+  
+    section #Info_Cont1,
+    section #Info_Cont2 {
+      margin: 0;
+    }
+  
+    section #Info_Cont1 h3,
+    section #Info_Cont2 h3 {
+      font-size: 1rem; /* Adjust font size */
+    }
+  
+    section #array_container {
+      height: 50vh; /* Adjust height */
+    }
+  
+    pre {
+      font-size: 0.7rem; /* Smaller font size for preformatted text */
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 1250px) {
+    nav {
+      grid-template-columns: 30% 70%; /* Restore original layout */
+      padding: 0; /* Remove padding */
+    }
+  
+    nav .array-inputs {
+      align-items: flex-start;
+      margin: 0; /* Remove margin */
+    }
+  
+    nav .header_right {
+      padding: 1.5rem 0; /* Adjust padding */
+    }
+  
+    nav .header_right .nav-heading {
+      font-size: 2.5rem; /* Adjust font size */
+    }
+  
+    nav .header_right .algos {
+      grid-template-columns: repeat(4, 1fr); /* Adjust number of columns */
+      gap: 1rem;
+      padding: 0; /* Remove padding */
+    }
+  
+    nav .header_right .algos button {
+      font-size: 1.2rem; /* Adjust button text size */
+    }
+  
+    section {
+      flex-direction: row; /* Horizontal layout */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margin */
+    }
+  
+    section #info_container {
+      width: 100%; /* Full width of its container */
+      max-width: 22rem; /* Limit the width */
+      padding: 1.5rem; /* Adjust padding */
+      margin: 0; /* Remove margin */
+      align-items: center; /* Center align */
+      box-sizing: border-box; /* Include padding in width */
+    }
+  
+    section #Info_Cont1,
+    section #Info_Cont2 {
+      margin: 1rem;
+    }
+  
+    section #Info_Cont1 h3,
+    section #Info_Cont2 h3 {
+      font-size: 1.1rem; /* Adjust font size */
+    }
+  
+    section #array_container {
+      height: 60vh; /* Adjust height */
+    }
+  
+    pre {
+      font-size: 0.8rem; /* Adjust font size */
+    }
+  }
+  
